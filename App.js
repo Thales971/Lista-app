@@ -52,7 +52,9 @@ export default function App() {
                     </View>
                 )}
                 ListEmptyComponent={() => (
-                    <Text style={styles.textoVazio}>Nenhuma tarefa adicionada. Você está livre!</Text>
+                    <Text style={styles.textoVazio}>
+                        Nenhuma tarefa adicionada. Você está livre!
+                    </Text>
                 )}
             />
         </View>
@@ -62,8 +64,8 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        paddingTop: 50,
+        backgroundColor: '#F5F5F5',
+        paddingTop: 60,
         paddingHorizontal: 20,
     },
     titulo: {
@@ -79,53 +81,61 @@ const styles = StyleSheet.create({
     input: {
         flex: 1,
         height: 50,
-        backgroundColor: '#f0f0f0',
+        backgroundColor: '#FFF',
         borderRadius: 8,
         paddingHorizontal: 15,
         fontSize: 16,
         borderWidth: 1,
-        borderColor: '#ddd',
+        borderColor: '#DDD',
     },
     botaoAdicionar: {
         width: 50,
         height: 50,
-        backgroundColor: '#ff0000',
+        backgroundColor: '#d80000',
         borderRadius: 8,
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 10,
     },
     textoBotaoAdicionar: {
-        color: '#fff',
+        color: '#FFF',
         fontSize: 24,
         fontWeight: 'bold',
     },
     itemLista: {
         flexDirection: 'row',
+        backgroundColor: '#FFF',
+        padding: 15,
+        borderRadius: 8,
+        marginBottom: 10,
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: 12,
-        borderRadius: 8,
-        backgroundColor: '#f2f2f2',
-        marginBottom: 8,
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        shadowOffset: { width: 0, height: 2 },
     },
     textoItem: {
         fontSize: 16,
         color: '#333',
+        flex: 1,
     },
     botaoRemover: {
-        backgroundColor: '#ff4d4d',
-        borderRadius: 8,
-        paddingHorizontal: 12,
-        paddingVertical: 6,
+        backgroundColor: '#FF3B30',
+        width: 30,
+        height: 30,
+        borderRadius: 15,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     textoBotaoRemover: {
-        color: '#fff',
+        color: '#FFF',
         fontWeight: 'bold',
     },
     textoVazio: {
         textAlign: 'center',
-        color: '#666',
-        marginTop: 16,
+        color: '#888',
+        fontSize: 16,
+        marginTop: 30,
     },
 });
